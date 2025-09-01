@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# Node/Build tools (not used here, but safe)
+node_modules/
+dist/
