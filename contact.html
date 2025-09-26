@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — kaizen IQ</title>
+  <meta name="description" content="Contact kaizen IQ. Tell us about your goals and we’ll follow up with practical next steps." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact — kaizen IQ" />
+  <meta property="og:description" content="Tell us about your goals. We’ll respond with clear next steps to unlock value with data, analytics, and AI." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:url" content="https://example.com/contact.html" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="canonical" href="https://example.com/contact.html" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" aria-label="Site header">
+    <div class="container header-inner">
+      <a class="logo" href="services.html#home" aria-label="kaizen IQ home">kaizen <span class="accent">IQ</span></a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="services.html#home" class="nav-link">Home</a></li>
+          <li><a href="services.html#about" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link is-active" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="section contact-page" aria-labelledby="contact-title">
+      <div class="container">
+        <h1 id="contact-title" class="section__title">Partner with us to define and realize what’s next.</h1>
+        <p class="lead">Please complete the form below to provide details about your organization.<br>Our team will review your submission and reach out with the appropriate next steps.</p>
+        <br>
+        <form id="contact-form" class="form" action="https://formspree.io/f/mkgqnwae" method="POST">
+          <!-- Spam honeypot for Formspree -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <!-- Optional: Subject line -->
+          <input type="hidden" name="_subject" value="Kaizen IQ Inquiry">
+          <div class="form__row">
+            <label for="first-name">FIRST NAME<span aria-hidden="true">*</span></label>
+            <input id="first-name" name="firstName" type="text" autocomplete="given-name" required minlength="2" maxlength="50" pattern="[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}" />
+          </div>
+          <div class="form__row">
+            <label for="last-name">LAST NAME<span aria-hidden="true">*</span></label>
+            <input id="last-name" name="lastName" type="text" autocomplete="family-name" required minlength="2" maxlength="50" pattern="[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}" />
+          </div>
+          <div class="form__row">
+            <label for="job-title">JOB TITLE</label>
+            <input id="job-title" name="jobTitle" type="text" autocomplete="organization-title" maxlength="80" />
+          </div>
+          <div class="form__row">
+            <label for="organization">ORGANIZATION</label>
+            <input id="organization" name="organization" type="text" autocomplete="organization" maxlength="120" />
+          </div>
+          <div class="form__row">
+            <label for="email">EMAIL<span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="120" />
+          </div>
+          <div class="form__row">
+            <label for="phone">PHONE</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="^[0-9()+\-\s]{7,20}$" maxlength="20" />
+          </div>
+          <div class="form__row">
+            <label for="message">Tell us more about what you are trying to solve for</label>
+            <textarea id="message" name="message" rows="6" maxlength="2000"></textarea>
+          </div>
+          <div class="form__row">
+            <label for="industry">INDUSTRY</label>
+            <select id="industry" name="industry">
+              <option value="" selected>Select industry</option>
+              <option>Construction</option>
+              <option>Real Estate</option>
+              <option>Manufacturing</option>
+              <option>Technology</option>
+              <option>Healthcare</option>
+              <option>Retail</option>
+              <option>Financial Services</option>
+              <option>Professional Services</option>
+              <option>Marketing</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <br>
+          <button type="submit" class="button button--cta">Submit</button>
+          <p id="form-status" class="form__status" role="status" aria-live="polite"></p>
+          <p class="small muted">Or email us at: <a href="mailto:kaizeniq@outlook.com">kaizeniq@outlook.com</a></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container footer-inner">
+      <p class="small muted">© 2025 kaizen IQ. All rights reserved.</p>
+    </div>
+    <button id="to-top" class="to-top" aria-label="Back to top">↑</button>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

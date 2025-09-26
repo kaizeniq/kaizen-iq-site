@@ -4,17 +4,23 @@
 const form = document.getElementById('contact-form');
 const statusEl = document.getElementById('form-status');
 
-if (form) {
+// Only use mailto fallback if no action is defined (i.e., no provider like Formspree)
+if (form && !form.hasAttribute('action')) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = (document.getElementById('name').value || '').trim();
-    const email = (document.getElementById('email').value || '').trim();
-    const message = (document.getElementById('message').value || '').trim();
+    const firstName = (document.getElementById('first-name')?.value || '').trim();
+    const lastName = (document.getElementById('last-name')?.value || '').trim();
+    const jobTitle = (document.getElementById('job-title')?.value || '').trim();
+    const organization = (document.getElementById('organization')?.value || '').trim();
+    const email = (document.getElementById('email')?.value || '').trim();
+    const phone = (document.getElementById('phone')?.value || '').trim();
+    const message = (document.getElementById('message')?.value || '').trim();
+    const industry = (document.getElementById('industry')?.value || '').trim();
 
     // Simple validation
-    if (!name || !email || !message) {
-      statusEl.textContent = 'Please complete all fields.';
+    if (!firstName || !lastName || !email) {
+      statusEl.textContent = 'First name, last name, and email are required.';
       statusEl.style.color = '#b00020';
       return;
     }
@@ -29,9 +35,19 @@ if (form) {
     statusEl.style.color = 'inherit';
 
     const subject = encodeURIComponent('Kaizen IQ Inquiry');
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`
-    );
+    const lines = [
+      `First Name: ${firstName}`,
+      `Last Name: ${lastName}`,
+      jobTitle ? `Job Title: ${jobTitle}` : '',
+      organization ? `Organization: ${organization}` : '',
+      `Email: ${email}`,
+      phone ? `Phone: ${phone}` : '',
+      industry ? `Industry: ${industry}` : '',
+      '',
+      'Details:',
+      message || '(none)'
+    ].filter(Boolean);
+    const body = encodeURIComponent(lines.join('\n'));
     window.location.href = `mailto:kaizeniq@outlook.com?subject=${subject}&body=${body}`;
   });
 }

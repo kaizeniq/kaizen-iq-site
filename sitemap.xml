@@ -6,7 +6,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://YOUR_USERNAME.github.io/YOUR_REPO/about.html</loc>
+    <loc>https://YOUR_USERNAME.github.io/YOUR_REPO/contact.html</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
