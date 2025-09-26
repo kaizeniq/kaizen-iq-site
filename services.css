@@ -8,6 +8,9 @@
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 }
+/* Large hero logo centered above headline */
+.hero-logo{height:96px;width:auto;display:inline-block;margin-bottom:var(--space-3)}
+@media (max-width:520px){.hero-logo{height:80px}}
 
 /* Reveal effects (light, accessible) */
 .reveal{opacity:0;transform:translateY(8px);animation:fadeUp .6s ease forwards}

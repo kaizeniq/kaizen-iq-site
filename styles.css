@@ -56,8 +56,9 @@ button{font:inherit}
   backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid #222;
 }
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:var(--space-2) 0}
-.logo{font-weight:700;color:var(--black);letter-spacing:.2px}
+.logo{font-weight:700;color:var(--black);letter-spacing:.2px;display:flex;align-items:center;gap:8px}
 .logo .accent{color:var(--blue)}
+.logo-mark{height:44px;width:auto;display:inline-block}
 /* Dark header overrides for consistent theme */
 .site-header .logo{color:var(--text)}
 .nav{display:flex;gap:var(--space-2);list-style:none;margin:0;padding:0;align-items:center}

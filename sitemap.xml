@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Replace base with your GitHub Pages domain when deployed -->
   <url>
-    <loc>https://YOUR_USERNAME.github.io/YOUR_REPO/</loc>
+    <loc>https://www.kaizen-one.com/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://YOUR_USERNAME.github.io/YOUR_REPO/contact.html</loc>
+    <loc>https://www.kaizen-one.com/contact.html</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
