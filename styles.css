@@ -57,7 +57,7 @@ button{font:inherit}
 }
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:var(--space-2) 0}
 .logo{font-weight:700;color:var(--black);letter-spacing:.2px;display:flex;align-items:center;gap:8px}
-.logo .accent{color:var(--blue)}
+.logo .accent{color:#906f3d} /* gold accent in logo text */
 .logo-mark{height:44px;width:auto;display:inline-block}
 /* Dark header overrides for consistent theme */
 .site-header .logo{color:var(--text)}
@@ -131,9 +131,9 @@ button{font:inherit}
   background:transparent;color:var(--black)
 }
 .button--cta{
-  background:#0ea5e9; /* blue for contrast on dark */
+  background:#000000; /* blue for contrast on dark */
   color:#fff;
-  border-color:#0ea5e9;
+  border-color:#906f3d;
   padding:.6rem 1.2rem; /* add room before/after text */
   border-radius:10px;
 }
