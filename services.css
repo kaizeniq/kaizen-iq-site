@@ -24,6 +24,12 @@
 /* Visually hidden for a11y headings */
 .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
 
+/* Align narrative section with hero spacing and alignment */
+.hero+.section{padding-top:var(--space-5)}
+.hero+.section .lead:first-of-type{margin-top:0}
+.hero+.section .container{text-align:center}
+.hero+.section .lead{margin-inline:auto}
+
 /* Larger heading for Our Offerings with higher specificity to override globals */
 .features .offerings-title.section__title{
   font-size:clamp(1.75rem,3.5vw,2.5rem);
