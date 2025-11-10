@@ -301,3 +301,52 @@ select:-moz-autofill{
   display:flex;align-items:center;justify-content:center;text-align:center;
 }
 .features .feature-card .card__body{margin-top:.25rem}
+
+
+/* Solutions page additions */
+/* Layout */
+.solution { padding-top: 2rem; padding-bottom: 2rem; }
+.solution__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+/* Two columns on larger screens */
+@media (min-width: 960px) {
+  .solution__inner { grid-template-columns: 1.1fr 1fr; gap: 2.5rem; }
+  .solution--reverse .solution__media { order: 2; }
+  .solution--reverse .solution__content { order: 1; }
+}
+/* Media */
+.solution__media picture, .solution__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.solution__media img {
+  border-radius: 12px;
+  /* Maintain a pleasant aspect if source images vary */
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+/* Content */
+.solution__eyebrow {
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted, #666);
+  margin: 0 0 0.25rem 0;
+}
+.solution__title {
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+}
+.solution__text { font-size: 1.05rem; margin: 0 0 0.75rem 0; }
+.solution__bullets { margin: 0; padding: 0 0 0 1.25rem; }
+.solution__bullets li { margin: 0.25rem 0; }
+
+/* Hero tweak so it reads well without an image */
+.solutions-hero .hero__title { margin-bottom: 0.25rem; }
+.solutions-hero .hero__sub { max-width: 70ch; }
