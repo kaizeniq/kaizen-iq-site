@@ -291,7 +291,7 @@ select:-moz-autofill{
 .cta-inner .button--cta{width:100%;}
 
 /* Jump link comfort for offerings anchor under sticky header */
-#offerings{scroll-margin-top:100px}
+#offerings{scroll-margin-top:160px}
 
 /* Align card titles across rows */
 .features .feature-card{display:flex;flex-direction:column;justify-content:flex-start}
