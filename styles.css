@@ -78,6 +78,13 @@ button{font:inherit}
 /* Hero */
 .hero{padding:calc(var(--space-6) + 24px) 0 var(--space-6)}
 .hero__title{font-size:clamp(1.75rem,3.5vw,2.5rem);line-height:1.2;margin:0 0 var(--space-2)}
+.hero__tagline{
+  margin:0 0 var(--space-2);
+  font-size:1.125rem;
+  font-weight:600;
+  text-transform:none;
+  letter-spacing:.01em;
+}
 .hero__sub{margin:0 0 var(--space-3);font-size:1.125rem}
 .hero-inner{text-align:center}
 .hero__cta{display:flex;gap:var(--space-2);flex-wrap:wrap;justify-content:center;flex-direction:column;align-items:center}
@@ -364,6 +371,12 @@ select:-moz-autofill{
   justify-content:center;
   text-align:center;
   margin-inline:auto;
+}
+.solutions-hero .hero__tagline{
+  text-align:center;
+  max-width:60ch;
+  margin:0 auto var(--space-2);
+  color:#d3d3d3;
 }
 
 .solution__content{
