@@ -68,7 +68,7 @@ button{font:inherit}
   width:44px;
   height:44px;
   border-radius:12px;
-  display:none;
+  display:none!important;
   align-items:center;
   justify-content:center;
   flex-direction:column;
@@ -102,7 +102,7 @@ button{font:inherit}
 @media (max-width:720px){
   .header-inner{justify-content:center}
   .logo{margin:0 auto;text-align:center}
-  .nav-toggle{display:flex;position:absolute;right:var(--space-2);top:50%;transform:translateY(-50%)}
+  .nav-toggle{display:flex!important;position:absolute;right:var(--space-2);top:50%;transform:translateY(-50%)}
   .site-header nav{
     position:absolute;
     top:100%;
