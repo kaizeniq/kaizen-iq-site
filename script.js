@@ -52,6 +52,53 @@ if (form && !form.hasAttribute('action')) {
   });
 }
 
+// Mobile navigation toggle
+const navToggle = document.querySelector('.nav-toggle');
+const primaryNav = document.getElementById('primary-nav');
+const mobileQuery = window.matchMedia('(max-width: 720px)');
+
+if (navToggle && primaryNav) {
+  const closeNav = () => {
+    navToggle.setAttribute('aria-expanded', 'false');
+    primaryNav.classList.remove('is-open');
+  };
+
+  const handleToggle = () => {
+    if (!mobileQuery.matches) return;
+    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!isOpen));
+    primaryNav.classList.toggle('is-open', !isOpen);
+  };
+
+  navToggle.addEventListener('click', handleToggle);
+
+  primaryNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (mobileQuery.matches) closeNav();
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    if (navToggle.getAttribute('aria-expanded') === 'true') {
+      closeNav();
+      navToggle.focus();
+    }
+  });
+
+  const handleViewportChange = () => {
+    if (!mobileQuery.matches) {
+      closeNav();
+    }
+  };
+
+  if (typeof mobileQuery.addEventListener === 'function') {
+    mobileQuery.addEventListener('change', handleViewportChange);
+  } else if (typeof mobileQuery.addListener === 'function') {
+    mobileQuery.addListener(handleViewportChange);
+  }
+}
+
 // Back-to-top visibility
 const toTop = document.getElementById('to-top');
 const showTop = () => {
