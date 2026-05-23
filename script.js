@@ -21,7 +21,7 @@ if (form && !form.hasAttribute('action')) {
     // Simple validation
     if (!firstName || !lastName || !email) {
       statusEl.textContent = 'First name, last name, and email are required.';
-      statusEl.style.color = '#b00020';
+      statusEl.style.color = '#b00020';w
       return;
     }
     // Basic email check
