@@ -287,6 +287,16 @@ svg {
   text-transform: uppercase;
 }
 
+.sol-sub {
+  margin: 14px 0 0;
+  color: var(--text-dim);
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(18px, 2.2vw, 26px);
+  line-height: 1.2;
+}
+
 .divider-h,
 .cta-rule {
   width: 48px;
@@ -517,7 +527,7 @@ svg {
 
 .narrative-detail p,
 .how-sub,
-.marketing-text p,
+.marketing-text p:not(.sol-sub),
 .ai-lead,
 .cta-sub {
   margin: 0;
@@ -537,8 +547,7 @@ svg {
 }
 
 .how-sub {
-  max-width: 520px;
-  padding-bottom: 8px;
+  align-self: center;
 }
 
 .how-steps {
@@ -550,10 +559,9 @@ svg {
 .step-item {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(120px, 0.28fr) minmax(0, 1fr) 48px;
+  grid-template-columns: minmax(0, 1fr) 48px;
   gap: clamp(24px, 5vw, 64px);
   align-items: center;
-  min-height: 210px;
   padding: 36px 0;
   border-top: 0.5px solid var(--gold-mute);
 }
@@ -562,13 +570,8 @@ svg {
   border-bottom: 0.5px solid var(--gold-mute);
 }
 
-.step-num {
-  color: var(--text-mute);
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(74px, 10vw, 132px);
-  font-style: italic;
-  font-weight: 300;
-  line-height: 0.8;
+.step-content {
+  padding-left: clamp(36px, 4.5vw, 72px);
 }
 
 .step-content h3 {
