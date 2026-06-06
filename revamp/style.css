@@ -685,6 +685,33 @@ svg {
   margin-top: 42px;
 }
 
+.sol-diagram {
+  margin-top: 44px;
+  color: var(--gold);
+}
+
+.sol-diagram svg {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+}
+
+.sol-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: solPulse 2.6s var(--ease) infinite;
+}
+
+@keyframes solPulse {
+  0%   { opacity: 0.75; transform: scale(0.5); }
+  70%  { opacity: 0;    transform: scale(2.6); }
+  100% { opacity: 0;    transform: scale(2.6); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sol-pulse { animation: none; opacity: 0.6; }
+}
+
 .marketing-pillars {
   align-self: end;
 }
