@@ -54,3 +54,24 @@ if ("IntersectionObserver" in window) {
   revealElements.forEach((element) => element.classList.add("is-visible"));
 }
 
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    try {
+      const res = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        contactForm.classList.add("is-hidden");
+        document.getElementById("form-success")?.classList.add("is-visible");
+        return;
+      }
+    } catch (_) {
+      /* fall through to native submit */
+    }
+    contactForm.submit();
+  });
+}

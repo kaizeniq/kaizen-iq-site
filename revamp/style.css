@@ -85,6 +85,7 @@ svg {
   align-items: center;
   justify-content: space-between;
   padding: 0 clamp(24px, 4vw, 48px);
+  padding-inline-start: clamp(48px, 6vw, 96px);
   background: var(--nav-bg);
   border-bottom: 0.5px solid var(--gold-mute);
   backdrop-filter: blur(12px);
@@ -188,6 +189,7 @@ svg {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   padding: calc(var(--nav-h) + 72px) clamp(24px, 4vw, 48px) 96px;
+  padding-inline-start: clamp(48px, 6vw, 96px);
   overflow: hidden;
 }
 
@@ -364,13 +366,22 @@ svg {
 }
 
 .hero-logo {
-  width: 160px;
+  width: 100%;
   color: var(--gold);
 }
 
 .enso-svg {
   width: 160px;
   height: 160px;
+}
+
+.brand-logo {
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 16px;
 }
 
 .hero-principles {
@@ -523,6 +534,18 @@ svg {
 .narrative-detail {
   display: grid;
   gap: 24px;
+}
+
+.form-success {
+  display: none;
+}
+
+.form-success.is-visible {
+  display: block;
+}
+
+#contact-form.is-hidden {
+  display: none;
 }
 
 .narrative-detail p,
