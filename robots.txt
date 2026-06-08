@@ -1,5 +1,5 @@
-
 User-agent: *
 Allow: /
+Disallow: /revamp/
 
 Sitemap: https://www.kaizen-one.com/sitemap.xml

@@ -1,221 +1,247 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Home | Kaizen IQ</title>
-  <meta name="description" content="Tampa Bay-based management consulting firm delivering data engineering, AI/ML, analytics, marketing strategy, and
-    data management services to turn data into advantage." />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-  <meta property="og:site_name" content="Kaizen IQ">
-  <meta property="og:type" content="website" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/kaizen-iq-logo.png">
-  <meta property="og:title" content="Tampa Bay Data & AI Consulting | Kaizen IQ" />
-  <meta property="og:description" content="Tampa Bay-based data management, AI, data analytics, data solutions and marketing strategy consulting services that harnesses data to drive business solutions." />
-  <meta property="og:image" content="https://www.kaizen-one.com/assets/kaizen-iq-logo.png">
-  <meta property="og:url" content="https://www.kaizen-one.com/" />
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tampa Bay Data, AI and Marketing Solutions | Kaizen IQ">
-  <meta name="twitter:description" content="Tampa Bay-based data engineering, AI, 
-    analytics, and marketing strategy consulting to drive growth.">
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="canonical" href="https://www.kaizen-one.com/" />
-  
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Kaizen IQ",
-      "description": "Kaizen IQ is a Tampa Bay-based management consulting firm specializing in data engineering, AI, analytics, and marketing strategy.",
-      "url": "https://www.kaizen-one.com/",
-      "logo": "https://www.kaizen-one.com/assets/kaizen-iq-logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Tampa",
-        "addressRegion": "FL",
-        "addressCountry": "US"
-      },
-      "areaServed": "Tampa Bay Area",
-      "email": "kaizeniq@outlook.com",
-      "openingHours": "Mo-Fr 09:00-17:00"
-    }
-    </script>
+<title>Tampa Bay Data & AI Consulting | Kaizen IQ</title>
+<meta name="description" content="Kaizen IQ delivers Tampa Bay data engineering, AI, analytics, and marketing strategy consulting that turns data into compounding business advantage."/>
+<link rel="canonical" href="https://www.kaizen-one.com/"/>
+<meta property="og:site_name" content="Kaizen IQ"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Tampa Bay Data & AI Consulting | Kaizen IQ"/>
+<meta property="og:description" content="Tampa Bay data engineering, AI, machine learning, analytics, and marketing strategy consulting for compounding business advantage."/>
+<meta property="og:image" content="https://www.kaizen-one.com/assets/kaizen-iq-logo.png"/>
+<meta property="og:url" content="https://www.kaizen-one.com/"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tampa Bay Data & AI Consulting | Kaizen IQ"/>
+<meta name="twitter:description" content="Data engineering, AI, machine learning, analytics, and marketing strategy consulting from Tampa Bay."/>
+<meta name="twitter:image" content="https://www.kaizen-one.com/assets/kaizen-iq-logo.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/kaizen-iq-logo-favicon.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Kaizen IQ",
+  "description": "Tampa Bay management consulting firm specializing in data engineering, AI, machine learning, analytics, and marketing strategy.",
+  "url": "https://www.kaizen-one.com/",
+  "logo": "https://www.kaizen-one.com/assets/kaizen-iq-logo.png",
+  "image": "https://www.kaizen-one.com/assets/kaizen-iq-logo.png",
+  "email": "kaizeniq@outlook.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tampa",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "areaServed": "Tampa Bay Area",
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Consulting Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data Engineering" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data, Decision Science & AI", "alternateName": "Data Science, Analytics & AI" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Strategic Advisory", "alternateName": "Management Consulting" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marketing Strategy" } }
+    ]
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" aria-label="Site header">
-    <div class="container header-inner">
-      <a class="logo" href="/" aria-label="Kaizen IQ home">kaizen <span class="accent">IQ</span></a>
-      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-nav" aria-expanded="false">
-        <span class="nav-toggle__bar" aria-hidden="true"></span>
-        <span class="nav-toggle__bar" aria-hidden="true"></span>
-        <span class="nav-toggle__bar" aria-hidden="true"></span>
-      </button>
-      <nav id="primary-nav" aria-label="Primary">
-        <ul class="nav">
-          <li><a href="/#offerings" class="nav-link">About</a></li>
-          <li><a href="/solutions.html" class="nav-link">Our Solutions</a></li>
-          <li><a href="/contact/" class="nav-link nav-link--cta">CONTACT US</a></li>
-        </ul>
-      </nav>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="wordmark" aria-current="page">
+    <span class="w-kaizen">kaizen</span><span class="w-iq">IQ</span>
+  </a>
+  <div class="nav-links">
+    <a href="#how">Our Approach</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="contact.html" class="nav-cta">Contact Us</a>
+  </div>
+  <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="overline">
+      <span class="overline-rule"></span>
+      <span>Hybrid Intelligence · Tampa Bay</span>
     </div>
-  </header>
+    <div class="headline-block">
+      <p class="kana">改善 — continuous improvement</p>
+      <h1 class="h1">The Next<br><em>Advantage.</em></h1>
+      <p class="h1-sub">Intelligence compounded over time</p>
+    </div>
+    <div class="divider-h"></div>
+    <p class="hero-body">
+      Data is no longer exhaust — it's leverage. Kaizen IQ partners with business leaders to design
+      <strong>data systems ready for AI and growth strategies</strong>
+      that shape the future of their business. Our focus is permanence — where data becomes architecture,
+      insight becomes leverage, and action compounds over time.
+    </p>
+    <div class="hero-ctas">
+      <a href="contact.html" class="btn-primary">Begin the conversation</a>
+      <a href="solutions.html" class="btn-ghost">Our solutions</a>
+    </div>
+  </div>
 
-  <main id="main">
-    <!-- Hero -->
-    <section class="section hero" aria-labelledby="svc-title">
-      <div class="container hero-inner">
-        <img src="https://www.kaizen-one.com/assets/kaizen-iq-logo.png" alt="Kaizen IQ logo" class="hero-logo">
-        <h1 id="svc-title" class="hero__title reveal">The Next Advantage.</h1>
-        <p class="hero__sub reveal">
-            Kaizen IQ partners with organizations to unlock The Next Advantage of Hybrid Intelligence 
-            that transforms complexity into clarity, foresight into action, and ambition into measurable results. 
-            Our focus is permanence—<strong>where data becomes architecture, insight becomes leverage, 
-            and action compounds over time.</strong>
-        </p>
-        <div class="hero__cta reveal">
-          <a class="button button--cta" href="/contact/">CONTACT US</a>
-        </div>
+  <div class="hero-right">
+    <div class="hero-logo">
+      <img src="assets/kaizen-iq-logo.png" alt="Kaizen IQ logo" class="brand-logo" width="128" height="128"/>
+    </div>
+
+    <div class="hero-principles">
+      <div class="principle-row">
+        <span class="p-num">01</span>
+        <span class="p-title">Precision</span>
+        <span class="p-desc">Every data system and strategy built for accuracy and permanence.</span>
       </div>
-    </section>
-
-    <!-- Narrative -->
-    <section class="section" aria-labelledby="narrative-title">
-      <div class="container">
-        <h2 id="narrative-title" class="visually-hidden">Narrative</h2>
-        <p class="lead reveal">
-          Data is no longer exhaust—it's leverage. The most successful organizations combine human expertise with AI 
-          to create hybrid intelligence that drives smarter decisions and faster results. From our base in Tampa Bay, <strong>Kaizen IQ partners with
-          leaders to design data systems, AI capabilities, and growth strategies</strong> that shape the future of their business.
-          
-        </p>
-        <p class="lead reveal delay-1">
-          From <strong>engineering</strong> and <strong>AI</strong> to 
-          <strong>marketing strategy</strong>, our team equips you to see further, decide faster, 
-          and grow with confidence.
-        </p>
+      <div class="principle-row">
+        <span class="p-num">02</span>
+        <span class="p-title">Intelligence</span>
+        <span class="p-desc">Human expertise and AI working as one compound system.</span>
       </div>
-    </section>
-
-    <!-- Outcomes
-    <section class="section features" aria-labelledby="outcomes-title">
-      <div class="container">
-        <p class="eyebrow">Outcomes</p>
-        <h2 id="outcomes-title" class="section__title">What you can expect</h2>
-        <div class="grid grid--3 feature-grid">
-          <div class="card feature-card"><p class="card__body">Lower CAC, higher LTV through verified attribution.</p></div>
-          <div class="card feature-card"><p class="card__body">Faster decisions with dashboards delivered in weeks, not months.</p></div>
-          <div class="card feature-card"><p class="card__body">Reduced risk via governance, observability, and compliance-ready pipelines.</p></div>
-          <div class="card feature-card"><p class="card__body">Proven ROI from measurable AI and marketing outcomes.</p></div>
-        </div>
+      <div class="principle-row">
+        <span class="p-num">03</span>
+        <span class="p-title">Compounding</span>
+        <span class="p-desc">Each engagement builds on the last. The advantage accumulates.</span>
       </div>
-    </section> -->
+    </div>
 
-    <!-- Why Us
-    <section class="section features" aria-labelledby="why-title">
-      <div class="container">
-        <p class="eyebrow">Why Us</p>
-        <h2 id="why-title" class="section__title">How we deliver</h2>
-        <div class="grid grid--3 feature-grid">
-          <div class="card feature-card"><p class="card__body">Speed to value: baseline dashboards or forecasts in weeks.</p></div>
-          <div class="card feature-card"><p class="card__body">Scalable stack: built with modern, cost-efficient tools (Snowflake, dbt, Airflow, Tableau, etc.).</p></div>
-          <div class="card feature-card"><p class="card__body">Proof-driven: every engagement tied to KPIs and experiments, not vague claims.</p></div>
-          <div class="card feature-card"><p class="card__body">Trusted across sectors: adaptable frameworks proven in finance, retail, healthcare, tech, and beyond.</p></div>
-        </div>
-      </div>
-    </section> -->
+    <span class="vertical-label">IQ</span>
+  </div>
 
-    <!-- Services: Build the Foundation -->
-    <section class="section features" aria-labelledby="data-title">
-      <div class="container">
-        <h2 id="offerings" class="section__title offerings-title reveal">How We Do It</h2>
-        <h3 id="data-title" class="section__title reveal">Build the Foundation</h3>
-        <p class="lead reveal">
-          Connect data sources, unify systems, and create a single <strong>source of truth</strong> 
-          that scales with your business. We don’t just build <strong>data pipelines</strong>—we 
-          build the <strong>data infrastructure</strong> backbone of decision-making.
-        </p>
-        <br>
-        <div class="grid grid--3 feature-grid">
-          <div class="card feature-card reveal"><h3 class="card__title">Data Foundations</h3><p class="card__body">Build a trusted backbone for decisions. Connect data from every source, ensure accuracy, and scale without friction.</p></div>
-          <div class="card feature-card reveal delay-1"><h3 class="card__title">Uncover What Matters</h3><p class="card__body">See your business in real time. From KPIs to forecasts, give every team clarity and control through dashboards and self-serve access.</p></div>
-          <div class="card feature-card reveal delay-2"><h3 class="card__title">Predictive Insight</h3><p class="card__body">Move from hindsight to foresight. Apply advanced models to uncover patterns, predict outcomes, and turn intelligence into action.</p></div>
-        </div>
-      </div>
-    </section>
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scroll</span>
+  </div>
+</section>
 
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <!-- Services: Unlock Intelligence -->
-    <section class="section features" aria-labelledby="ai-title">
-      <div class="container">
-        <p class="eyebrow reveal">AI in Action</p>
-        <h2 id="ai-title" class="section__title reveal">Anticipate. Automate. Assure.</h2>
-        <p class="lead reveal">Move beyond reporting. <strong>Harness Generative AI</strong>, <strong>ANI (Artificial Narrow Intelligence)</strong>, and 
-          <strong>advanced Machine Learning</strong> to anticipate demand, personalize at scale, and surface the signals that drive growth, efficiency, and resilience.
-        </p>
-        <br>
-        <div class="grid grid--3 feature-grid">
-          <div class="card feature-card reveal"><h3 class="card__title">Decision Intelligence</h3><p class="card__body">Go beyond prediction. Equip teams with AI-driven guidance that accelerates growth and sharpens competitive edge.</p></div>
-          <div class="card feature-card reveal delay-1"><h3 class="card__title">Automation &amp; Agents</h3><p class="card__body">Let work run itself. Deploy AI-powered agents and assistants that adapt to your tools and free teams to focus on higher-value decisions.</p></div>
-          <div class="card feature-card reveal delay-2"><h3 class="card__title">Responsible AI</h3><p class="card__body">Trust built in. Governance, monitoring, and ethical AI safeguards ensure every system stays accurate, reliable, and compliant.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <!-- Services: Drive Measurable Impact -->
-    <section class="section features" aria-labelledby="mkt-title">
-      <div class="container">
-        <p class="eyebrow reveal">Strategic Marketing & Growth</p>
-        <h2 id="mkt-title" class="section__title reveal">From Strategy to Market Impact</h2>
-        <p class="lead reveal">
-          Marketing is only as strong as its proof. We design acquisition, attribution, and 
-          lifecycle programs as part of a holistic <strong>growth strategy</strong>, delivering 
-          measurable results while reinforcing <strong>brand trust</strong> and long-term value.
-        </p>
-        <br>
-        <div class="grid grid--3 feature-grid">
-          <div class="card feature-card reveal"><h3 class="card__title">Market Entry & Growth</h3><p class="card__body">Identify the most effective channels to capture demand and accelerate growth. We design acquisition strategies that balance cost efficiency with long-term customer value.</p></div>
-          <div class="card feature-card reveal delay-1"><h3 class="card__title">Measure What Matters</h3><p class="card__body">Move beyond transactions to build enduring relationships. We develop segmentation and lifecycle strategies that strengthen loyalty and maximize lifetime value.</p></div>
-          <div class="card feature-card reveal delay-2"><h3 class="card__title">Strategic Continuity</h3><p class="card__body">Turn relationships into advantage. Build enduring client loyalty through masterful strategies that compound growth and lifetime value.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <!-- Full-bleed CTA banner as its own section -->
-    <section class="section cta-gradient">
-      <div class="container cta-inner">
-        <h2 class="cta-title">Advance Without Limits.</h2>
-        <p class="cta-sub">Start your journey to continuous improvement.</p>
-        <a class="button button--cta" href="/contact/">CONTACT US</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" aria-label="Site footer">
-    <div class="container footer-inner">
-      <p class="small muted">
-        © 2025 Kaizen One Inc. All rights reserved.
+<!-- WHY — THE PHILOSOPHY -->
+<section class="narrative" id="offerings">
+  <div class="narrative-inner">
+    <div class="overline">
+      <span class="overline-rule"></span>
+      <span>The Philosophy</span>
+    </div>
+    <h2 class="section-h2">Complexity<br>into <em>clarity.</em></h2>
+    <div class="narrative-grid">
+      <p class="narrative-lead">
+        The most successful organizations combine human expertise with AI to create
+        hybrid intelligence — where every decision is sharper and the advantage accumulates.
       </p>
+      <div class="narrative-detail">
+        <p>From our base in Tampa Bay, <strong>Kaizen IQ partners with business leaders to design data systems ready for AI and growth strategies</strong> that shape the future of their business.</p>
+        <p>From the data layer to the boardroom, we engineer intelligence that compounds.</p>
+      </div>
     </div>
-    <button id="to-top" class="to-top" aria-label="Back to top">↑</button>
-  </footer>
-  <script src="script.js" defer></script>
+  </div>
+</section>
+
+<!-- WHAT — OUR CAPABILITIES -->
+<section class="capabilities-section">
+  <div class="capabilities-inner">
+    <div class="overline">
+      <span class="overline-rule"></span>
+      <span>Our capabilities</span>
+    </div>
+    <h2 class="section-h2">Built to compound.<br><em>By design.</em></h2>
+    <div class="capabilities-rows">
+      <div class="principle-row">
+        <span class="p-num">01</span>
+        <h3 class="p-title"><a href="solutions.html#data-engineering">Data Engineering</a></h3>
+        <span class="p-desc">Unified pipelines, trusted architecture, and governance — the foundation every AI initiative depends on.</span>
+      </div>
+      <div class="principle-row">
+        <span class="p-num">02</span>
+        <h3 class="p-title"><a href="solutions.html#data-science-ai">Data, Decision Science & AI</a></h3>
+        <span class="p-desc">Advanced analytics, machine learning, and generative AI that move the business from hindsight to foresight — sharpening every decision from the front line to the boardroom.</span>
+      </div>
+      <div class="principle-row">
+        <span class="p-num">03</span>
+        <h3 class="p-title"><a href="solutions.html#strategic-advisory">Strategic Advisory</a></h3>
+        <span class="p-desc">Strategy grounded in your data, not generic benchmarks — built to hold up quarter over quarter.</span>
+      </div>
+      <div class="principle-row">
+        <span class="p-num">04</span>
+        <h3 class="p-title"><a href="solutions.html#marketing">Marketing Strategy</a></h3>
+        <span class="p-desc">Acquisition, attribution, and lifecycle programs designed to grow customer lifetime value.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="how" id="how">
+  <div class="how-header">
+    <div class="overline">
+      <span class="overline-rule"></span>
+      <span>Method</span>
+    </div>
+    <h2 class="section-h2">How we<br><em>do it.</em></h2>
+    <p class="how-sub">Three stages, one continuous arc — each builds on the last.</p>
+  </div>
+
+  <div class="how-steps">
+    <div class="step-item reveal">
+      <div class="step-content">
+        <h3>Build the Foundation</h3>
+        <p>We unify your data sources, automate pipelines, and establish a trusted architecture — the backbone every AI and analytics initiative depends on.</p>
+      </div>
+      <div class="step-accent"></div>
+    </div>
+    <div class="step-item reveal">
+      <div class="step-content">
+        <h3>Activate Intelligence</h3>
+        <p>From real-time dashboards to machine learning models, we turn raw data into clarity. Every team gets the signal they need — and the clarity to act on it.</p>
+      </div>
+      <div class="step-accent"></div>
+    </div>
+    <div class="step-item reveal">
+      <div class="step-content">
+        <h3>Compound the Advantage</h3>
+        <p>Strategy without proof is noise. We align analytics to business objectives, defining the KPIs and programs that turn intelligence into measurable growth.</p>
+      </div>
+      <div class="step-accent"></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner">
+    <p class="cta-kana">前進 — advance without limits</p>
+    <h2 class="cta-h2">Ready to compound<br>your <em>advantage?</em></h2>
+    <div class="cta-rule"></div>
+    <p class="cta-sub">The next advantage belongs to those who design for it.</p>
+    <a href="contact.html" class="btn-primary btn-large">Begin the conversation</a>
+  </div>
+  <div class="cta-grid-lines" aria-hidden="true">
+    <div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="wordmark">
+      <span class="w-kaizen">kaizen</span><span class="w-iq">IQ</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="footer-copy">© 2026 Kaizen One Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
-</html> 
+</html>
