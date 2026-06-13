@@ -513,10 +513,14 @@ svg {
   line-height: 0.98;
 }
 
-.narrative-grid {
+.narrative-header {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: clamp(48px, 7vw, 80px);
+  align-items: center;
+}
+
+.narrative-grid {
   margin-top: 56px;
   padding-top: 56px;
   border-top: 0.5px solid var(--gold-mute);
@@ -975,7 +979,7 @@ svg {
     gap: 14px 18px;
   }
 
-  .p-desc {
+  .principle-row .p-desc {
     grid-column: 2;
   }
 

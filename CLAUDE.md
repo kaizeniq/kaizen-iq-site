@@ -1,7 +1,22 @@
 # CLAUDE.md — Kaizen IQ Website
-## Master context file for Claude Code
+## Claude Code's design-system & build reference
 
-Read this file first before touching any code. This is the source of truth for design decisions, implementation rules, and agent responsibilities.
+**`AGENTS.md` is the orchestration brain — read it first, every session.** It governs roles, task routing, the operating model, and session protocol. This file is the design/build reference the brain points to: design tokens, typography, component specs, page structure, and approved copy. It is canonical for *what the site is*; `AGENTS.md` is canonical for *how the team operates*. If the two disagree on workflow, `AGENTS.md` wins.
+
+---
+
+## Operating Model — Roles & Handoff Protocol (READ FIRST)
+
+**Claude Code is the overseer/manager. Codex is the executor.**
+
+This is a hard division of labor, chosen for token efficiency in a high-context setup:
+
+- **Claude Code (me)** steers business context and direction toward the goal. My purview: strategy, positioning, SEO, copy decisions, design critique, planning, review, and producing precise implementation specs. I own documentation and context files (`CLAUDE.md`, `AGENTS.md`, `/specs`, `.claude/` config, memory).
+- **Codex** is the executor for **all code changes** — `.html`, `.css`, `.js`, and any other source files. I do **not** edit code directly.
+
+**Handoff protocol:** when a change requires touching code, I stop and produce a precise spec for Codex — exact file, exact location (selector / line / section), and the exact change, with the rationale. I never make the edit myself.
+
+A `PreToolUse` hook (`.claude/hooks/block-code-edits.sh`) enforces this by blocking `Edit`/`Write` on code files. If I hit that block, it is working as intended — I hand off to Codex rather than trying to route around it.
 
 ---
 
@@ -273,9 +288,9 @@ Content (centered):
 ## File Structure (Target)
 ```
 /
-├── CLAUDE.md              ← this file
+├── AGENTS.md              ← THE BRAIN: roles, routing, operating model (read first)
+├── CLAUDE.md              ← this file: design-system & build reference
 ├── Codex.MD               ← Codex-facing mirror of CLAUDE.md
-├── AGENTS.md              ← agent roles and task routing
 ├── index.html
 ├── solutions.html
 ├── contact.html

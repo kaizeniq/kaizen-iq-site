@@ -1,15 +1,40 @@
 # AGENTS.md — Kaizen IQ
-## Agent Roles, Task Routing & Collaboration Protocol
+## The Orchestration Brain — Roles, Task Routing & Collaboration Protocol
+
+**This file is the brain. Read it FIRST, every session, before any other doc.**
+It governs *who does what and how work flows*. Both Claude Code and Codex orient around this file (Codex reads it natively).
+
+---
+
+## Document Hierarchy (Source-of-Truth Map)
+
+| File | Role | Canonical for |
+|------|------|---------------|
+| **AGENTS.md** (this file) | **The brain / entry point** | Operating model, agent roles, task routing, session protocol, non-negotiables |
+| **CLAUDE.md** | Design-system & build reference + Claude-specific notes | Design tokens, typography, component specs, page structure, approved copy |
+| **Codex.MD** | Codex-facing mirror of the build reference | Same design content as CLAUDE.md, framed for the executor |
+
+The brain points to the reference docs; it does not duplicate them. If `AGENTS.md` and another file disagree on *how the team operates*, this file wins. For *design/build specifics*, `CLAUDE.md` is authoritative and `Codex.MD` must stay synced to it.
 
 ---
 
 ## Overview
 
 This project uses a multi-agent approach. Each agent has a defined scope.
-Claude Code and Codex should route tasks to the right agent context before executing.
+Claude Code and Codex route every task through this brain to the right agent context before executing.
 
-**Always read CLAUDE.md before reading this file.**
-`CLAUDE.md` is the canonical source of truth. `Codex.MD` is a Codex-facing mirror and must remain synced to `CLAUDE.md`.
+---
+
+## Operating Model — Roles & Handoff Protocol (READ FIRST)
+
+**Claude Code is the overseer/manager. Codex is the executor.**
+
+This is the top-level rule that governs everything below. Chosen for token efficiency in a high-context setup:
+
+- **Claude Code** steers business context and direction: strategy, positioning, SEO, copy decisions, design critique, planning, review, and producing precise implementation specs. It owns documentation/context files (`CLAUDE.md`, `Codex.MD`, `AGENTS.md`, `/specs`, `.claude/` config, memory). It does **not** edit code directly — a `PreToolUse` hook (`.claude/hooks/block-code-edits.sh`) blocks `Edit`/`Write` on code files.
+- **Codex** is the executor for **all code changes** — `.html`, `.css`, `.js`, and any other source.
+
+**How this maps onto the agent roster below:** the agent roles are *contexts*, not separate operators. Claude Code occupies the strategy/design/copy/QA/review contexts and produces specs. Codex occupies the implementation context (Dev Agent) and writes the code. Any task that ends in a code edit is handed off to Codex with an exact spec (file, location, change, rationale).
 
 ---
 
@@ -36,6 +61,7 @@ Claude Code and Codex should route tasks to the right agent context before execu
 ### 2. Dev Agent
 **File:** `agents/dev-agent.md`
 **Scope:** HTML, CSS, JavaScript implementation — translating design specs into working code
+**Executed by:** **Codex.** This is the only agent context that writes production code. Claude Code does not occupy this role — it prepares the spec and hands it to Codex.
 **Trigger phrases:**
 - "Implement..."
 - "Build the..."
@@ -145,12 +171,12 @@ Claude Code and Codex should route tasks to the right agent context before execu
 
 ### Starting a new session
 ```
-1. Read CLAUDE.md
-2. If using Codex, read Codex.MD to confirm Codex-specific alignment with CLAUDE.md
-3. Read AGENTS.md
+1. Read AGENTS.md (this brain) — operating model + routing
+2. Read CLAUDE.md — design system & build reference
+3. If using Codex, Codex.MD mirrors CLAUDE.md for the executor
 4. Identify which agent role applies to the current task
 5. Read that agent's specific .md file
-6. Execute
+6. Execute (Claude prepares specs; Codex writes code)
 ```
 
 ### Completing a session

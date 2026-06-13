@@ -1,9 +1,24 @@
 # Codex.MD — Kaizen IQ Website
 ## Codex-facing mirror of CLAUDE.md
 
-Read `CLAUDE.md` first before touching any code. `CLAUDE.md` is the canonical source of truth for design decisions, implementation rules, and agent responsibilities.
+**`AGENTS.md` is the orchestration brain — read it first (Codex reads it natively).** It governs roles, task routing, the operating model, and session protocol.
 
-This file exists so Codex can operate in lock step with Claude Code. If this file and `CLAUDE.md` ever disagree, follow `CLAUDE.md` and update this file to match.
+Then read `CLAUDE.md`, the design/build reference, before touching code. This file (`Codex.MD`) mirrors that reference so Codex can operate in lock step with Claude Code. Precedence: `AGENTS.md` for *how the team operates*; `CLAUDE.md` for *design/build specifics*. If this file and `CLAUDE.md` ever disagree, follow `CLAUDE.md` and update this file to match.
+
+---
+
+## Operating Model — Roles & Handoff Protocol (READ FIRST)
+
+**Claude Code is the overseer/manager. Codex is the executor.**
+
+This is a hard division of labor, chosen for token efficiency in a high-context setup:
+
+- **Claude Code** steers business context and direction toward the goal: strategy, positioning, SEO, copy decisions, design critique, planning, review, and producing precise implementation specs. It owns documentation and context files (`CLAUDE.md`, `Codex.MD`, `AGENTS.md`, `/specs`, `.claude/` config, memory). It does **not** edit code directly — a `PreToolUse` hook blocks it from doing so.
+- **Codex (you)** are the executor for **all code changes** — `.html`, `.css`, `.js`, and any other source files. Claude hands you a spec; you implement it.
+
+**How work reaches you:** Claude produces a handoff spec — exact file, exact location (selector / line / section), the exact change, and the rationale. You implement it against the design tokens and rules below, then report back what changed (files, CSS variables used, deviations).
+
+**If CLAUDE.md changes:** keep this file synced. Resolve any conflict in favor of `CLAUDE.md`.
 
 ---
 
@@ -275,9 +290,9 @@ Content (centered):
 ## File Structure (Target)
 ```
 /
-├── CLAUDE.md              ← canonical source of truth
-├── Codex.MD               ← Codex-facing mirror of CLAUDE.md
-├── AGENTS.md              ← agent roles and task routing
+├── AGENTS.md              ← THE BRAIN: roles, routing, operating model (read first)
+├── CLAUDE.md              ← design-system & build reference
+├── Codex.MD               ← this file: Codex-facing mirror of CLAUDE.md
 ├── index.html
 ├── solutions.html
 ├── contact.html
