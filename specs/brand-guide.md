@@ -658,5 +658,10 @@ The public website currently presents Kaizen IQ as the sole brand. The parent/ho
 ### Proprietary Methodology Name
 Leading candidate: **Rensa** (Japanese: 連鎖 — chain reaction / linked progression). Not finalized. To be added to Section 1 and approved copy once confirmed.
 
+### Market Thesis / Problem Statement
+> "Companies are struggling to translate AI, analytics, and data infrastructure into durable operating models and executive decision systems."
+
+This is the core market problem Kaizen IQ exists to solve. Candidate for use in: Mission refinement, ICP pain point copy, pitch decks, About page, and the origin story. Not yet woven into public-facing website copy — hold until positioning and methodology name are finalized.
+
 ### Origin Story
 Not yet documented. Identified as a missing brand asset — strengthens trust signals (EEAT) and ICP resonance. To be added to Section 2 when provided.
